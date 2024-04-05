@@ -939,3 +939,10 @@
  .opilsol-N24 .pagiset { margin-top: 4rem; }
  .opilsol-N24 .pagiset-link { width: 3.2rem; height: 3.2rem; }
 }
+
+.wrap{
+    width : 97%; /*nav도 같이 맞춰서 줄여야함 .opilsol-N1 */
+    margin : 0 auto;
+}
+
+

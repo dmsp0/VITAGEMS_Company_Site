@@ -23,16 +23,16 @@
   <link rel="stylesheet" href="../resources/css/style.css">
 </head>
 
-<body>
-  <header id="header-container">
+<div class="wrap">
+  <div id="header-big">
     <!-- 헤더가 삽입 -->
-  </header>
+  </div>
 <script>
     // JavaScript를 사용하여 헤더 삽입.
     fetch('header.html')
         .then(response => response.text())
         .then(html => {
-            document.getElementById('header-container').innerHTML = html;
+            document.getElementById('header-big').innerHTML = html;
         });
 </script>
   <!-- [E]opilsol-N1 -->
@@ -235,7 +235,7 @@
   </script>
     
   </main>
-  
+  </div>
   <!-- [E]opilsol-N3 -->
   <script src="../resources/js/setting.js"></script>
   <script src="../resources/js/plugin.js"></script>

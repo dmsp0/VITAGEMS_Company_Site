@@ -1,7 +1,7 @@
 @charset "utf-8"; 
 
 /* opilsol-N1 [yGlUJnpuAQ] */
-.opilsol-N1 { z-index: 5000; position: fixed; width: 100%; height: 8rem; }
+.opilsol-N1 { z-index: 5000; position: fixed; width: 97%; height: 8rem; }
 .opilsol-N1::after { content: ""; position: absolute; top: 0; left: 0; height: 100%; width: 100%; transition: 0.4s; background: linear-gradient(rgba(var(--black-rgb), 0.5), rgba(0, 255, 0, 0)); }
 .opilsol-N1:hover::after { background: rgba(var(--black-rgb), 0.7); }
 .opilsol-N1.block-scroll-active::after { background: rgba(var(--black-rgb), 0.5); }
