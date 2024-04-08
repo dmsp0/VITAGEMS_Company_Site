@@ -960,3 +960,48 @@
     height: 8rem;
 }
 
+.how_use_img{
+    margin-left: 2rem;
+}
+
+.how_use_imgs{
+    display: inline-flex;
+    max-width: 100%;
+}
+
+.produ_img{
+    max-width: 100%;
+}
+
+.regi_btns{
+    display: inline-flex;
+    height: 30rem;
+    margin-top: 6rem;
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+.regi_btn{
+    font-size: 2rem;
+    border-radius: 20px;
+    border-color: #2db400;
+    margin-top: 3rem;
+    padding : 10% 0;
+    width:100%;
+}
+
+#map{
+    width: 70rem;
+    height:50rem;
+    margin-left: 27%;
+    border: 7px solid rgb(0, 0, 0);
+    border-radius: 70%;
+}
+
+.map_wrap{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.map_wrap>h3{
+    font-size: 4rem;
+}
