@@ -24,6 +24,37 @@
     <link rel="stylesheet" href="../resources/css/template.css" />
     <link rel="stylesheet" href="../resources/css/common.css" />
     <link rel="stylesheet" href="../resources/css/style.css" />
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.11/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        let popup = document.querySelector('dialog');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          googleCalendarApiKey: 'AIzaSyALsrU4G_3Pj-m2mfWfh-8wBk53FILevv8',
+          events: {
+            googleCalendarId: '9c129be795613e149cf4f190a8719c2bdfa6a6a36c7c3ab8ec088f3b197e56f6@group.calendar.google.com'
+          },
+
+          eventClick: function(info) {
+          info.jsEvent.preventDefault(); // don't let the browser navigate
+          popup.querySelector('div').innerHTML = `
+            <h3>${info.event.title}</h3>
+            <div>${info.event.extendedProps.description}</div> ` 
+            ;
+          popup.setAttribute('open','open');
+          }
+        });
+        calendar.render();
+        popup.querySelector('button').addEventListener('click',()=>{
+          popup.removeAttribute('open');
+        });
+      });
+    </script>
+
   </head>
 
   <body>
@@ -44,7 +75,7 @@
     <!-- [S]opilsol-N22 교육 정보 시작-->
     <div class="opilsol-N22" data-bid="YplUjNUnNJ">
       <div class="content-container">
-        <div class="container-md">
+        <div class="container-sm">
           <div class="content-desc">
             <h2 class="textset-tit acc-txt"> VITAGEMS 교육 프로그램 </h2>
             <p class="textset-desc ht-xs">
@@ -57,22 +88,13 @@
                 <img class="cardset-img pc-img" src="../resources/images/person-img-4.jpg" alt="이미지">
               </figure>
               <div class="cardset-body">
-                <h3 class="cardset-tit">기본 사용법</h3>
-                <p class="cardset-desc"> 시스템의 기본적인 사용법으로 로그인하는 방법부터 기본적인 기능을 활용하는 방법 </p>
+                <h3 class="cardset-tit">기본 및 고급 기능 사용법</h3>
+                <p class="cardset-desc"> 시스템의 기본적인 사용법으로 로그인하는 방법부터 시스템의 고급 기능 및 활용법을 통해 사용자들이 최대로 활용할 수 있도록 </p>
               </div>
             </div>
             <div class="item cardset">
               <figure class="cardset-figure">
                 <img class="cardset-img pc-img" src="../resources/images/person-img-5.jpg" alt="이미지">
-              </figure>
-              <div class="cardset-body">
-                <h3 class="cardset-tit">고급 기능 및 활용법</h3>
-                <p class="cardset-desc"> 시스템의 고급 기능 및 활용법을 통해 사용자들이 최대로 활용할 수 있는 방법 </p>
-              </div>
-            </div>
-            <div class="item cardset">
-              <figure class="cardset-figure">
-                <img class="cardset-img pc-img" src="../resources/images/person-img-6.jpg" alt="이미지">
               </figure>
               <div class="cardset-body">
                 <h3 class="cardset-tit">문제 해결 및 도움말</h3>
@@ -81,33 +103,26 @@
             </div>
             <div class="item cardset">
               <figure class="cardset-figure">
-                <img class="cardset-img pc-img" src="../resources/images/person-img-7.jpg" alt="이미지">
-              </figure>
-              <div class="cardset-body">
-                <h3 class="cardset-tit">새로운 업데이트 및 기능</h3>
-                <p class="cardset-desc"> 시스템이 업데이트 및 새로운 기능 추가 시 추가 교육 실시 </p>
-              </div>
-            </div>
-            <div class="item cardset">
-              <figure class="cardset-figure">
-                <img class="cardset-img pc-img" src="../resources/images/person-img-8.jpg" alt="이미지">
+                <img class="cardset-img pc-img" src="../resources/images/person-img-6.jpg" alt="이미지">
               </figure>
               <div class="cardset-body">
                 <h3 class="cardset-tit">사용 사례 및 최적화</h3>
                 <p class="cardset-desc"> 시스템의 사용 사례와 최적화 방법에 대한 교육으로 작업을 더 효율적으로 수행할 수 있다 </p>
               </div>
             </div>
-
           </div>
+          <div class="edu_regi_btn_container">
+          <a class="btn btn-outline-dark regi_btn2" href="../html/education_registration.html">교육 신청하러 가기 → 
+            
+          </a>
+          
         </div>
+      </div>
       </div>
     </div>
     <!-- [E]opilsol-N22 교육정보 끝-->
-        <div class="opilsol-N4" data-bid="NwLujnPUFv">교육정보 FULLCALENDAR 넣기</div>
-        <div class="opilsol-N4" data-bid="NwLujnPUFv">교육정보 educational Info</div>
-        <div class="opilsol-N4" data-bid="NwLujnPUFv">교육정보 educational Info</div>
-        <div class="opilsol-N4" data-bid="NwLujnPUFv">교육정보 educational Info</div>
-
+  
+      
       </main>
 
       <!-- [E]opilsol-N6 -->
